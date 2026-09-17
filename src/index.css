@@ -19,7 +19,7 @@
   --radius: 0.75rem;
 
   --color-highlight: #4fd1c5;
-  --color-surface: #1b2f2e;
+  --color-surface: #112928;
 }
 
 @layer base {
@@ -38,3 +38,12 @@
   }
 }
 
+@layer components {
+  .glassmorphism {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+}
