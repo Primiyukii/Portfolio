@@ -46,4 +46,31 @@
     border-radius: var(--radius);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
+
+  .glass-strong {
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
 }
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+      filter: blur(0px);
+    }
+  }
+    .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out both;
+    }
+}
+
