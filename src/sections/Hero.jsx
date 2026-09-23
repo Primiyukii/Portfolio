@@ -1,5 +1,7 @@
+import { Download } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/Button';
+import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 const PARTICLE_COUNT = 40;
 
 const particles = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
@@ -73,10 +75,17 @@ export const Hero = () => {
               </p>
             </div>
 
-            <div>
-              <Button Size="lg">Contact Me<ArrowRight className="w-5 h-5" />
-              </Button>
-            </div>
+           <div>
+            <Button size="lg" className="bg-[#1ac4b6] hover:bg-[#17b0a3] text-white rounded-full px-8 py-6 text-base font-medium gap-2 shadow-[0_0_30px_rgba(26,196,182,0.5)] hover:shadow-[0_0_40px_rgba(26,196,182,0.7)] transition-all duration-300">
+              Contact Me <ArrowRight className="w-5 h-5" />
+            </Button>
+            <button>
+              <AnimatedBorderButton>
+                <Download className="w-5 h-5" />
+                  Download CV
+              </AnimatedBorderButton>
+            </button>
+           </div>
           </div>
         </div>
       </div>

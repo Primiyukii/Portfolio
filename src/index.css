@@ -6,7 +6,7 @@
 
   --color-card: #141a1f;
 
-  --color-primary: #298d85;
+  --color-primary: #0b5d4e;
   --color-primary-foreground: #fbfbfb;
 
   --color-secondary: #55b8f6;
@@ -75,6 +75,10 @@
     }
   }
 
+.animate-border-travel {
+  animation: border-travel 3s linear infinite;
+}
+
   @keyframes slow-drift {
     0%, 100% {
       transform: translate(0, 0px);
@@ -121,5 +125,10 @@
     .animation-delay-800 {
       animation-delay: 800ms;
     }
-  }
 
+    .animated-border:hover {
+      background-color: color-mix (in, srgb, #43cbbf 15%, transparent);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 20px color-mix(in srgb, #43cbbf 20%, transparent);
+  }
+}
