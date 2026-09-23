@@ -1,3 +1,5 @@
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/Button';
 const PARTICLE_COUNT = 40;
 
 const particles = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
@@ -55,19 +57,25 @@ export const Hero = () => {
             </div>
 
 
-            <div>
-              <h1>
-                Powering <span className="text-primary text-md glow-text">Next-generation technology</span> 
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+                Building <span className="text-primary text-md glow-text">Smarter solutions</span> 
                 <br />
-                with uncompromising 
+                through 
                 <br />
                 <span className="font-serif italic text-md font-normal text-white">
-                   precision and performance.
+                   software,AI, and technology.
                 </span>
               </h1>
-              <p className="text-lg muted-foreground max-w-lg">
-                
+              <p className="text-lg muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                Hi, I'm Renz Vargas — a Computer Science graduate and aspiring software developer with hands-on experience in software development, AI and machine learning, databases, Linux systems, and hardware-integrated projects.
+                I enjoy building practical solutions, exploring new technologies, and turning ideas into functional software.
               </p>
+            </div>
+
+            <div>
+              <Button Size="lg">Contact Me<ArrowRight className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         </div>
