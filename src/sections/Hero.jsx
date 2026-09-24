@@ -4,8 +4,8 @@ import { Button } from '@/components/Button';
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 
 const socials = [
-  { icon: FaGithub, href: "" },
-  { icon: FaLinkedin, href: "" },
+  { icon: FaGithub, href: "https://github.com/Primiyukii" },
+  { icon: FaLinkedin, href: "https://www.linkedin.com/in/renz-vargas-3a9552428" },
 ];
 
 const PARTICLE_COUNT = 40;
