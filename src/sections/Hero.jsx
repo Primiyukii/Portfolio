@@ -104,8 +104,26 @@ export const Hero = () => {
               ))}
             </div>
           </div>
+
+          <div className="relative animate-fade-in animation-delay-300">
+            <div className="relative max-w-124 mx-auto">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary//10 blur-2xl animate-pulse"></div>
+              <div className="relative glassmorphism rounded-3xl p-2 glow-border">
+                <img src="/profile.png" alt="Renz Vargas" 
+                className="w-124 aspect-[4/5] object-cover rounded-2xl"/>
+
+
+                <div className="absolute -bottom-4 -right-4 glassmorphism rounded-sm px-4 py-2 animate-float">
+                  <div className="flex items-center gap-3">
+                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                       <span className="whitespace-nowrap text-sm">Available For Work</span>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </section>
   );
 };

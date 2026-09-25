@@ -49,7 +49,7 @@
 
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: var(--radius);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
@@ -59,10 +59,16 @@
     text-shadow: 0 0 30px
     color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
+
+  .glow-border {
+    box-shadow: 0 0 20px
+    color-mix(in srgb, var(--color-primary) 20%, transparent),
+    inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
 }
 
 @layer utilities {
-  @keyframes fadeIn {
+  @keyframes fade-in {
     from {
       opacity: 0;
       transform: translateY(20px);
@@ -94,8 +100,22 @@
   }
 }
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
     .animate-fade-in {
         animation: fadeIn 0.5s ease-in-out both;
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
     }
 
     .animation-delay-100 {
