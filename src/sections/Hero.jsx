@@ -3,6 +3,20 @@ import { FaGithub, FaLinkedin} from 'react-icons/fa';
 import { Button } from '@/components/Button';
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 
+const skills = [
+  "Python",
+  "JavaScript",
+  "PHP",
+  "React",
+  "Django",
+  "SQL/MYSQL",
+  "AI/ML",
+  "Linux",
+  "Git/Github",
+  "Arduino",
+  "ESP32",
+];
+
 const socials = [
   { icon: FaGithub, href: "https://github.com/Primiyukii" },
   { icon: FaLinkedin, href: "https://www.linkedin.com/in/renz-vargas-3a9552428" },
@@ -119,9 +133,28 @@ export const Hero = () => {
                        <span className="whitespace-nowrap text-sm">Available For Work</span>
                       </div>
                    </div>
+
+                   <div>
+
+                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-20 animate-fade-in animation-delay-600">
+            <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
+            <div className="relative overflow-hidden">
+              <div className="flex animate-marquee">
+                {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-gray-400/50 hover:text-gray-300 transition-colors">
+                  {skill}
+                  </span>
+                </div>
+              ))}
+               </div>
+              </div>
           </div>
         </div>
     </section>
