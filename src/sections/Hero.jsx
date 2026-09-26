@@ -1,4 +1,4 @@
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import { FaGithub, FaLinkedin} from 'react-icons/fa';
 import { Button } from '@/components/Button';
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
@@ -143,7 +143,7 @@ export const Hero = () => {
           </div>
 
           <div className="mt-20 animate-fade-in animation-delay-600">
-            <p className="text-sm text-muted-foreground mb-6 text-center">Technologies I work with</p>
+            <p className="text-sm mb-6 text-center text-gray-200/50">Technologies I work with</p>
             <div className="relative overflow-hidden">
               <div className="flex animate-marquee">
                 {[...skills, ...skills].map((skill, idx) => (
@@ -156,6 +156,16 @@ export const Hero = () => {
                </div>
               </div>
           </div>
+        </div>
+
+        <div className="absolute bottom-8 inset-x-0 flex justify-center z-20 animate-fade-in animation-delay-800">
+           <a href="#about"
+           clasName="flex flex-col items-center justify-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+           >
+            <span className="text-xs uppercase tracking-wider leading-none text-gray-200/50">Scroll </span>
+            <ChevronDown className="w-6 h-6 animate-bounce shrink-0 text-gray-200/50" />
+           </a>
+
         </div>
     </section>
   );
