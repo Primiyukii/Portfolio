@@ -29,7 +29,7 @@ export const Navbar = () => {
     return (
     <header
         className={`fixed top-0 left-0 right-0 transition-all duration-300 z-50 ${
-        isScrolled ? "bg-background/80 backdrop-blur-sm border-b border-border" : ""
+        isScrolled ? "bg-surface/70 backdrop-blur-md" : ""
         }`}
     >
         <nav className="container mx-auto px-4 flex items-center justify-between">
@@ -65,11 +65,15 @@ export const Navbar = () => {
             <div className="md:hidden glass-strong animate-fade-in rounded-lg mt-2 py-4">
                 <div className="container mx-auto px-4 flex flex-col items-center gap-2">
                     {navLinks.map((link, index) => (
-                        <a href={link.href} key={index} className="text-lg text-muted-foreground py-2 px-4 hover:text-blue-500 transition-colors duration-300 hover:bg-color-surface rounded-full">
-                            {link.label}
+                        <a href={link.href} 
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        key={index} className="text-lg text-muted-foreground py-2 px-4 hover:text-blue-500 transition-colors duration-300 hover:bg-color-surface rounded-full">
+                        {link.label}
                         </a>
                     ))}
-                    <Button size="medium" className="mt-2">Contact Me</Button>
+                    <Button 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    size="medium" className="mt-2">Contact Me</Button>
                 </div>
             </div>
         )}

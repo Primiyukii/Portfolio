@@ -8,13 +8,15 @@ const skills = [
   "JavaScript",
   "PHP",
   "React",
-  "Django",
+  "Java",
   "SQL/MYSQL",
   "AI/ML",
   "Linux",
   "Git/Github",
   "Arduino",
   "ESP32",
+  "C++",
+  "Laravel",
 ];
 
 const socials = [
@@ -143,7 +145,7 @@ export const Hero = () => {
           </div>
 
           <div className="mt-20 animate-fade-in animation-delay-600">
-            <p className="text-sm mb-6 text-center text-gray-200/50">Technologies I work with</p>
+            <p className="text-sm mb-6 text-center text-gray-200/70">Technologies I work with</p>
             <div className="relative overflow-hidden">
               <div className="flex animate-marquee">
                 {[...skills, ...skills].map((skill, idx) => (
