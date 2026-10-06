@@ -5,8 +5,8 @@ import { X } from "lucide-react";
 
 const navLinks = [
     {href: '#about', label: 'About'},
-    {href: '#experience', label: 'Experience'},
-    {href: '#projects', label: 'Projects'},
+    {href: '#Projects', label: 'Projects'},
+    {href: '#Experience', label: 'Experience'},
 ];
 
 
