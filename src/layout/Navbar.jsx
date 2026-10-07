@@ -5,8 +5,8 @@ import { X } from "lucide-react";
 
 const navLinks = [
     {href: '#about', label: 'About'},
-    {href: '#Projects', label: 'Projects'},
-    {href: '#Experience', label: 'Experience'},
+    {href: '#projects', label: 'Projects'},
+    {href: '#experience', label: 'Experience'},
 ];
 
 
@@ -46,21 +46,16 @@ export const Navbar = () => {
                 </div>
             </div>
 
-
-            {/* Desktop Contact Button */}
             <div className="hidden md:block flex items-center gap-2">
-                <Button size="small">Contact Me</Button>
+                <Button href="#contact" size="small">Contact Me</Button>
             </div>
 
-
-            {/* Mobile Navigation */}
             <button className="md:hidden p-2 rounded-full hover:bg-color-surface transition-colors duration-300 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-color-highlight cursor-pointer"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
         </nav>
 
-        {/* Mobile Navigation Links */}
         {isMobileMenuOpen && (
             <div className="md:hidden glass-strong animate-fade-in rounded-lg mt-2 py-4">
                 <div className="container mx-auto px-4 flex flex-col items-center gap-2">
@@ -72,6 +67,7 @@ export const Navbar = () => {
                         </a>
                     ))}
                     <Button 
+                    href="#contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     size="medium" className="mt-2">Contact Me</Button>
                 </div>

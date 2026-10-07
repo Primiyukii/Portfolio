@@ -4,6 +4,7 @@ import { Experience } from '@/sections/Experience'
 import { Projects } from '@/sections/Projects'
 import { Contact } from '@/sections/Contact'
 import { Navbar } from '@/layout/Navbar'
+import { Footer } from '@/layout/Footer'
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Experience />
         <Contact />
       </main>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default App

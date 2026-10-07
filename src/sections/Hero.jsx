@@ -36,7 +36,7 @@ const particles = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       <img
         src="/hero-bg.jpg"
         alt="Hero Background"
@@ -103,7 +103,7 @@ export const Hero = () => {
               size="lg"
               className="bg-[#1ac4b6] hover:bg-[#17b0a3] text-white rounded-full px-8 py-6 text-base font-medium gap-2 shadow-[0_0_30px_rgba(26,196,182,0.5)] hover:shadow-[0_0_40px_rgba(26,196,182,0.7)] transition-all duration-300"
             >
-              Contact Me <ArrowRight className="w-5 h-5" />
+               Contact Me <ArrowRight className="w-5 h-5" />
             </Button>
               <AnimatedBorderButton href="/resume.pdf" download="Renz_Vargas_Resume.pdf">
                 <Download className="w-5 h-5" />
