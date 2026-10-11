@@ -106,7 +106,6 @@ export const Contact = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
@@ -128,12 +127,10 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
-          <div className="glassmorphism p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
+          <div className="glassmorphism p-6 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
             <form className="space-y-6" onSubmit={handleSubmit}>
-
               <div>
                 <label
                   htmlFor="name"
@@ -244,8 +241,7 @@ export const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-6 animate-fade-in animation-delay-400">
-
-            <div className="glassmorphism rounded-3xl p-8">
+            <div className="glassmorphism rounded-3xl p-6 sm:p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Contact Information
               </h3>
@@ -255,18 +251,18 @@ export const Contact = () => {
                   <a
                     key={i}
                     href={item.href}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group min-w-0"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <div className="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
 
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-sm text-muted-foreground">
                         {item.label}
                       </div>
 
-                      <div className="font-medium">
+                      <div className="font-medium break-words">
                         {item.value}
                       </div>
                     </div>
@@ -276,23 +272,21 @@ export const Contact = () => {
             </div>
 
             {/* Availability Card */}
-            <div className="glassmorphism rounded-3xl p-8 border border-primary/30">
+            <div className="glassmorphism p-6 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
 
-                <span className="font-medium">
-                  Open to Opportunities
-                </span>
+                <span className="font-medium">Open to Opportunities</span>
               </div>
 
               <p className="text-muted-foreground text-sm">
                 I'm currently looking for entry-level opportunities where I
-                can apply my skills in software development, IT, systems,
-                AI and machine learning, cybersecurity, data, or other
-                technology-related roles while continuing to grow professionally.
+                can apply my skills in software development, IT, systems, AI
+                and machine learning, cybersecurity, data, or other
+                technology-related roles while continuing to grow
+                professionally.
               </p>
             </div>
-
           </div>
         </div>
       </div>
